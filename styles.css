@@ -1,0 +1,38 @@
+:root{ 
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(51, 51, 51)
+}
+
+#navBar {
+    display: flex;
+    list-style: none;   /* removes the circles */
+    padding: 0;         /* removes left indent */
+    margin: 0;
+    justify-content: space-evenly;
+    border: black solid;
+    position: relative;
+}
+
+#statesH1 {
+    margin-left: auto;
+}
+
+
+
+#background_div {
+    background: url("imgFiles/USA_background_flag.jpg") no-repeat center/cover;
+    height: 100vh;   /* allows growth */
+    width:50vw;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body{
+    margin: 25px;
+}
+main {
+    margin-bottom: 100px;
+}
