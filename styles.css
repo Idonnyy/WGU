@@ -1,38 +1,75 @@
-:root{ 
+:root { 
     font-size: large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(51, 51, 51)
+    background-color: rgb(51, 51, 51);
 }
 
-#navBar {
-    display: flex;
-    list-style: none;   /* removes the circles */
-    padding: 0;         /* removes left indent */
-    margin: 0;
-    justify-content: space-evenly;
-    border: black solid;
+#grid_container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "bg header header"
+        "bg aside  main"
+        "footer footer footer";
+    height: 100vh;
+    border:  solid red 5px;
+}
+
+#background_img {
+    grid-area: bg;
+    background-image: url("/imgFiles/USA_background_flag.jpg");
+    background-size: cover;
+    background-position: center;
     position: relative;
+    border:  solid blue 5px;
 }
 
-#statesH1 {
-    margin-left: auto;
+#aside {
+    grid-area: aside;
+    padding: 20px;
 }
 
+#header { grid-area: header; }
+#main   { grid-area: main; }
+#footer { grid-area: footer; }
 
+#header {
+    display: grid;
+    grid-template-rows: auto auto;   /* H1 on top, nav below */
+    justify-items: end;              /* aligns items to the right */
+    gap: 10px;                       /* space between H1 and nav */
+    padding: 10px;
+    border:  solid blue 5px;
+}
 
-#background_div {
-    background: url("imgFiles/USA_background_flag.jpg") no-repeat center/cover;
-    height: 100vh;   /* allows growth */
-    width:50vw;
+#header h1 {
+    margin: 0;
+    border:  solid blue 5px;
 }
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+nav {
+    display: flex;                    /* horizontal layout for nav items */
+    gap: 20px;                        /* space between items */
+    border: 2px solid black;
+    padding: 5px 10px;
+    background-color: rgba(255,255,255,0.1); /* optional subtle background */
+    border-radius: 5px;               /* optional rounded edges */
+    border:  solid green 5px;
+    width: 50vw;
+    position: relative; /* set the nav elemement relative to it parent to move its posisiton*/
+    left: -40px;
+    top: 15px; /* Move the Nav element slight down. */
 }
-body{
-    margin: 25px;
-}
-main {
-    margin-bottom: 100px;
+
+nav ul {
+    display: flex;                     /* horizontal layout for <li> */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    border:  solid blue 5px;
+    width: 50vw;
+    height: auto;
+    font-size: 28px;
 }
