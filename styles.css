@@ -1,118 +1,83 @@
-:root { 
+:root {
     font-size: large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(51, 51, 51);
 }
 
+/* Grid Layout */
 #grid_container {
     display: grid;
-    grid-template-columns: 3fr 1fr 3fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-        "bg header header"
-        "bg aside  main "
-        "footer footer footer";
-    height: 100vh;
-    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
 }
 
-#background_img {
-    grid-area: bg;
-    background-image: url("/imgFiles/USA_background_flag.jpg");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    box-shadow: 0 0 30px rgb(0, 0, 0), 0 0 60px rgb(0, 0, 0);
-    
+/* Header */
+header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    grid-column: 1 / 3;
+    background-color: rgba(39, 28, 28, 0.09);
 }
 
-#aside {
-    grid-area: aside;
-    padding: 20px;
-}
-
-#header { grid-area: header; }
-#main   { grid-area: main; }
-#footer { grid-area: footer; }
-
-#header {
-    display: grid;
-    grid-template-rows: auto auto;   /* H1 on top, nav below */
-    justify-items: end;              /* aligns items to the right */
-    gap: 10px;                       /* space between H1 and nav */
-    padding: 10px;
-    
-}
-
-#header h1 {
-    margin: 0;                                                                
-}
-
+/* Navigation */
 nav {
-    display: flex;                    /* horizontal layout for nav items */
-    gap: 20px;                        /* space between items */
-    padding: 5px 10px;
-   /* optional subtle background */
-    border-radius: 5px;               /* optional rounded edges */                                                           
-    width: 50vw;
-    position: relative; /* set the nav elemement relative to it parent to move its posisiton*/
-    left: -29px;
-    top: 15px; /* Move the Nav element slight down. */
-
-}
-nav a {
-    text-decoration: none;
-    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 3;
+    background: rgba(39, 28, 28, 0.05);
 }
 
 nav ul {
-    display: flex;                     /* horizontal layout for <li> */
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex;
     gap: 20px;
-                                                                        
-    width: 50vw;
-    height: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     font-size: 28px;
-    
 }
-nav ul> li> a:hover{ /* set list item to glow on hover */
+
+/* Main Section */
+#section1 {
+    grid-column: 2 / 3;
+    background: rgba(83, 42, 73, 0.6);
+    padding: 20px;
+    grid-row: 3
+}
+
+/* Aside */
+aside {
+    grid-column: 1 / 2;
+    grid-row: 3;
+    padding: 20px;
+    background: rgba(232, 232, 232, 0.6);
+}
+
+/* Footer */
+footer {
+    grid-column: 1 / 3;
+    background-color: rgba(39, 28, 28, 0.09);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Body Background */
+body {
+    margin: 0;
+    background-image: radial-gradient(
+        circle at 0% 100%, 
+        #8B0000,
+        #CCCCCC,
+        #00008B
+    );
+}
+
+/* Hover Effect */
+nav ul > li > a:hover {
     color: white;
-    font-size: 32px;
     border: solid red;
     background-color: blue;
     transform: scale(1.1);
     transition: 0.4s ease;
 }
-main{
-    border: solid rgb(0, 255, 115);
-    position: relative;
-    left: -135px;
-    width: auto;
-    top: 5px;
-}
-
-body {
-    min-height: 100vh;
-    margin: 0;
-    background-image: radial-gradient(
-        circle at 0% 100%, 
-        #8B0000,   /* dark red */
-        #CCCCCC,   /* darker gray instead of pure white */
-        #00008B    /* dark blue */
-    );
-    background-size: cover;
-}
-
-footer {
-    display: inline;
-    height: 10vh;
-}
-
-/* @media 
-keyframes
-
-
-
-*/

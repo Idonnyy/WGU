@@ -1,0 +1,30 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-image: radial-gradient(
+        circle at 0% 100%, 
+        #8B0000,   /* dark red */
+        #CCCCCC,   /* darker gray instead of pure white */
+        #00008B    /* dark blue */
+    );
+    background-size: cover;
+}
+
+
+
+
+
+nav a {
+    text-decoration: none;
+    color:black;
+}
+
+#background_img {
+    grid-area: bg;
+    background-image: url("/imgFiles/USA_background_flag.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 0 0 30px rgb(0, 0, 0), 0 0 60px rgb(0, 0, 0);
+    
+}
