@@ -284,7 +284,7 @@ header h1 > a {
     min-height: 100vh;
 }
 
-.gridContainer > aside > img {
+.gridContainer > aside {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     padding: 20px;

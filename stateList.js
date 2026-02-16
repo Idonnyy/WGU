@@ -5,6 +5,16 @@ const aside = document.getElementById("aside");
 const stateCptImage = document.getElementById("stateCptImage");
 const stateCapitalE = document.getElementById("stateCapitalE");
 
+// Form validation for email confirmation
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    const email = document.getElementById("email").value;
+    const confirm = document.getElementById("confirmEmail").value;
+    if(email.toLowerCase() !== confirm.toLowerCase()){
+        e.preventDefault();
+        alert("Email addresses do not match!");
+    }
+});
+
 // State capitals
 const stateCapital = {
     washington: "Olympia",
