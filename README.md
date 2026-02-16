@@ -1,94 +1,51 @@
-Project Overview
+A. Git Repository
 
-This project is a multi-page website about the United States, focusing on Washington State and selected cities. It demonstrates HTML, CSS, and JavaScript usage, satisfying the WGU Front-End Web Development assignment requirements (A–I).
+Repository: WGU Front_Web_Dev
 
-Assignment Requirements & File Mapping
-A. GitLab/GitHub Repository
-
-Requirement: Create a repository, clone locally, commit/push after completing each part.
-
-Satisfaction: This repository contains all project files. Multiple commits have been made after each major task.
+All commits after completing each part.
 
 B. Page Layouts and Content
+1. Home Page (index.html)
+Requirement	Line(s)	Description
+HTML title	6	<title>Our United States</title>
+CSS & JS links	7–8	<link rel="stylesheet" href="styles.css"> and <script src="stateList.js" defer></script>
+Header	11–14	<header><h1>Our Great States</h1></header>
+Navigation	16–23	<nav>...</nav>
+Main section	26–32	<section id="stateListSection">...</section>
+Aside	34–38	<aside>...</aside>
+2. Capital City Page (olympia.html)
+Requirement	Line(s)	Description
+Page title	6	<title>Olympia, Washington</title>
+Header	11–14	<header><h1 class="highlight">Olympia</h1></header>
+Navigation	16–24	<nav>...</nav>
+Section with city info	26–48	<section id="section1"> includes population, incorporated year, region, classification, income
+Absolute positioning	32	id="population" element uses position: absolute in CSS
+Class selector used twice	34–35	<span class="highlight">Incorporated: 1859</span>
+Float property	29	id="stateCptImage" floated left
+Aside with fun facts	50–55	<aside><ul id="asideFacts">...</ul></aside>
+Footer & table	58–72	<footer><table id="contactHours">...</table></footer>
+3. Noncapital Cities (seattle.html, spokane.html, tacoma.html)
 
-Home Page (index.html)
+Copy of olympia.html structure with updated content.
 
-Lines 14–50: <header>, <nav>, <section>, <aside> with semantic structure.
+Lines follow the same pattern: header (11–14), nav (16–24), section info (26–48), aside fun facts (50–55), footer table (58–72).
 
-Line 21: Title in <head>
-
-Lines 23–24: External CSS & JS linked
-
-Lines 27–35: Navigation menu
-
-Capital City Page (olympia.html)
-
-Lines 15–65: Olympia city information (population, incorporation, region, classification, average income)
-
-Lines 38–42: Absolute positioning on population (#population)
-
-Lines 40–41: Class selector .highlight used twice
-
-Line 36: Float applied to #stateCptImage
-
-Noncapital City Pages (seattle.html, spokane.html, tacoma.html)
-
-Lines 15–65 (each page): Population, incorporation year, region, classification, average income
-
-Lines 38–42 (each page): Fun facts in <aside>
-
-Form Page (aboutUs.html)
-
-Lines 36–55: Form with text fields, email, confirm email, message, labels, and submit button
-
-Navigation System
-
-Lines 27–35 in all pages: <nav> consistent across pages
-
+4. Form Page (aboutUs.html)
+Requirement	Line(s)	Description
+Form structure	36–55	Includes name, email, confirm email, message fields with labels and submit button
 C. HTML Elements
-
-External Link
-
-Line 48 in aboutUs.html: <a href="https://github.com/Idonnyy" target="_blank">GitHub</a>
-
-Ordered List
-
-Line 52 in index.html: <ol id="cities">
-
-Unordered List
-
-Lines 44–48 in olympia.html: <ul id="asideFacts">
-
-Table
-
-Lines 70–84 in all pages: <table id="contactHours">
-
-D. CSS Stylesheet (styles.css)
-
-Font-family
-
-Line 1–3: :root { font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
-
-:hover pseudo-class
-
-Lines 78–84: nav ul > li > a:hover
-
-Float property
-
-Line 168: #stateCptImage { float: left; }
-
-Absolute positioning
-
-Line 40 in olympia.html: #population with class="highlight"
-
-Relative positioning
-
-Line 66: aside { position: relative; }
-
-Selectors
-
-Element selector: footer { ... } (line 59)
-
-Class selector: .highlight (used multiple times, e.g., line 37)
-
-ID selector: #section1 (line 28)
+Element	File	Line(s)	Description
+External link	aboutUs.html	42	<a href="https://github.com/Idonnyy" target="_blank">GitHub</a>
+Ordered list	index.html	52	<ol id="cities">
+Unordered list	olympia.html	50–55	<ul id="asideFacts">
+Table	All pages	58–72	<table id="contactHours">
+D. CSS (styles.css)
+Requirement	Line(s)	Description
+Font-family	1–3	:root { font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+:hover pseudo-class	78–84	nav ul > li > a:hover
+Float property	168	#stateCptImage { float: left; }
+Absolute positioning	40 (olympia.html)	#population
+Relative positioning	66	aside { position: relative; }
+Element selector	59	footer { ... }
+Class selector	37, 34–35	.highlight
+ID selector	28	#section1
