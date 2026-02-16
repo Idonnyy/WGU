@@ -45,7 +45,7 @@ nav ul {
 /* Main Section */
 #section1 {
     grid-column: 2 / 3;
-    background: rgba(255, 56, 79, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     grid-row: 3;
 }
@@ -69,7 +69,7 @@ aside {
 /* Footer */
 footer {
     grid-column: 1 / 3;
-    background-color: rgba(21, 0, 255, 0.683);
+    background-color: rgba(0, 0, 0, 0.683);
     text-align: center;
     padding: 10px;
 }
@@ -80,7 +80,7 @@ body {
     background-image: radial-gradient(
         circle at 0% 100%, 
         #8B0000,
-        #CCCCCC,
+        #cccccc,
         #00008B
     );
     border-radius: 20px;
@@ -89,11 +89,9 @@ body {
 
 /* Hover Effect */
 nav ul > li > a:hover {
-    color: white;
-    border: solid red;
-    background-color: blue;
+    color: rgba(0, 154, 0, 0.783);
     transform: scale(1.1);
-    transition: 0.4s ease;
+    transition: 0.2s ease;
 }
 
 nav a {
@@ -262,4 +260,39 @@ ul li[data-state="washington"] a::after {
     padding: 5px;
     border-radius: 5px;
     font-weight: bold;
+}
+
+.capitalHover:hover {
+    color: rgb(55, 0, 255);
+    transform: scale(1.2);
+    transition: 0.3s ease;
+}
+
+/*Style for Capitals*/
+header h1 > a {
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}   
+
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+.gridContainer > aside > img {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    padding: 20px;
+    background-color: rgba(232, 232, 232, 0.6);
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
 }

@@ -29,7 +29,7 @@ const stateCapitalImages = {
 // State flags
 const stateFlags = {
     washington: "https://c7.alamy.com/comp/PY6GJ4/flag-state-of-washington-vertical-flagisolated-on-a-white-background-PY6GJ4.jpg",
-    california: "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg",
+    california: "https://c8.alamy.com/comp/PY6GEP/flag-state-of-california-vertical-flagisolated-on-a-white-background-PY6GEP.jpg",
     texas: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg",
 };
 
@@ -45,7 +45,7 @@ const cityData = {
         population: "52,555",
         region: "Pacific Northwest",
         Income: "$77,000",
-        
+
         funFact1: "Olympia is known for its vibrant arts scene and is home to the Olympia Farmers Market, which has been operating since 1972.",
         funFact2: "The city is named after the Olympic Mountains, which are visible from many parts of Olympia and provide a stunning backdrop to the city.",
         funFact3: "The city is surrounded by natural beauty, including the nearby Capitol Lake and the scenic Puget Sound, making it a popular destination for outdoor enthusiasts."
@@ -77,6 +77,21 @@ if (stateh1) stateh1.textContent = pageName.charAt(0).toUpperCase() + pageName.s
 
 // Update capital
 if (stateCapitalE && stateCapital[pageName]) stateCapitalE.textContent = stateCapital[pageName];
+    anchorCapital = document.createElement("a");
+    anchorCapital.textContent = stateCapital[pageName];
+    anchorCapital.href = `${stateCapital[pageName].toLowerCase().replace(/\s/g, "")}.html`;
+    stateCapitalE.innerHTML = "State Capital: ";
+    anchorCapital.style.textDecoration = "none";
+    anchorCapital.style.color = "white";
+    anchorCapital.classList.add("capitalHover");
+    anchorCapital.addEventListener("mouseover", () => {
+        anchorCapital.style.color = "Darkgreen";
+    });
+    anchorCapital.addEventListener("mouseout", () => {
+        anchorCapital.style.color = "white";
+    });
+
+    stateCapitalE.appendChild(anchorCapital);
 
 // Update aside flag
 if (aside && stateFlags[pageName]) {
