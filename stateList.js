@@ -45,8 +45,11 @@ const cityData = {
         population: "52,555",
         region: "Pacific Northwest",
         Income: "$77,000",
-        funFact: "Olympia is known for its vibrant arts scene and is home to the Olympia Farmers Market, which has been operating since 1972."
-    },
+        
+        funFact1: "Olympia is known for its vibrant arts scene and is home to the Olympia Farmers Market, which has been operating since 1972.",
+        funFact2: "The city is named after the Olympic Mountains, which are visible from many parts of Olympia and provide a stunning backdrop to the city.",
+        funFact3: "The city is surrounded by natural beauty, including the nearby Capitol Lake and the scenic Puget Sound, making it a popular destination for outdoor enthusiasts."
+    }};
 
 // Get current page name (e.g., "washington" from "washington.html")
 const pageName = window.location.pathname.split("/").pop().replace(".html", "").toLowerCase();

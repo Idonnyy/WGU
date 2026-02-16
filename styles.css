@@ -257,7 +257,7 @@ ul li[data-state="washington"] a::after {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.hightlight::first-line {
+.hightlight::first-word {
     background-color: rgba(70, 103, 214, 0.8);
     padding: 5px;
     border-radius: 5px;
